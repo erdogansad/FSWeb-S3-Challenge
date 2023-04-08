@@ -46,7 +46,6 @@ header {
 
 #header-div {
     display: flex;
-    
     align-items: center;
     flex-direction: column;
     height: 23rem;
@@ -79,7 +78,6 @@ nav {
     display: flex;
     justify-content: center;
     color: rgb(225, 239, 230);
-    font-size: 4rem;
 }
 
 #social-media i {
@@ -123,7 +121,7 @@ nav {
 #gallery-imgs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 100%;
     padding: 0 12rem;
@@ -295,13 +293,68 @@ footer {
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
+    #header-div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 30rem;
+        background-color: rgb(0, 4, 17, .8)
+    }
+
+    #header-title {
+        width: 20rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
     
+    #header-title a {
+        font-size: 2.5rem;
+        color: white;
+    }
+    
+    nav {
+        width: 100%;
+        padding: 4rem 0;
+    }
+    
+    #nav-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #nav-links a {
+        font-size: 2.5rem;
+        color: rgb(225, 239, 230);
+    }
+    
+    #social-media{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: rgb(225, 239, 230);
+    }
+    
+    #social-media i {
+        font-size: 2rem;
+        margin: 1.5rem 1rem !important;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
     }
     
+    #gallery-imgs img {
+        object-fit: contain;
+        text-align: center;
+        height: auto;
+        width: 75vh;
+        padding: 1.5rem;
+    }
+
     /* about us section */
 
     .about {
@@ -315,6 +368,10 @@ footer {
     
     .about-container .text {
         width: 85%;
+    }
+
+    .about-container .text h3 {
+        padding-bottom: 1rem;
     }
     
     /* contact us section */
@@ -345,5 +402,29 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        flex-direction: column;
+    }
+    #email-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #email-input {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 5vh;
+    } 
+    #email-input input::placeholder {
+        font: 15px/3 sans-serif;
+    }
+    #email-button {
+        width: 100%;
+        font-size: 4vh;
+    }
+    #copyright {
+        font-size: 1.5rem;
+        text-align: center;
+        color:rgb(225, 239, 230);
     }
 }
